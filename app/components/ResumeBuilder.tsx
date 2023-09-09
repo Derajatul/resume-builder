@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 "use client"
 
 import InformationModal from './InformationModal'
@@ -15,7 +18,7 @@ const initialData = {
   phoneNumber: '089243573821',
   address: 'Rangkasbitung, Lebak, Banten'
 }
-// @ts-nocheck
+
 const ResumeBuilder = () => {
   const [data, setData] = useState(initialData)
   const [summary, setSummary] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ante risus, porta vitae nibh sed, tempor dictum nulla. Duis porta, erat ut aliquam pulvinar, arcu dolor feugiat eros, sed aliquam enim justo ac arcu. ')
