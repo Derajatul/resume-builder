@@ -7,14 +7,14 @@ type EducationModalValues = {
 
 type EducationDataType = {
   school: string;
-  start: number;
-  end:number;
+  start: string;
+  end: string;
 }
 
 const EducationModal = ({onAddEducation}: EducationModalValues) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [education,setEducation] = 
-    useState({school: '',start: 0,end: 0})
+    useState({school: '',start: '',end: ''})
 
   const handleChange = (e: React.ChangeEvent<any>) => {
     setEducation({
@@ -62,14 +62,14 @@ const EducationModal = ({onAddEducation}: EducationModalValues) => {
                 />
                 <Input 
                    name="start"
-                   type="number" 
+                   type="text" 
                    label="Start"
                    value={education.start}
                    onChange={handleChange}
                  />
                 <Input 
                    name="end"
-                   type="number"
+                   type="text"
                    label="End"
                    value={education.end}
                    onChange={handleChange}

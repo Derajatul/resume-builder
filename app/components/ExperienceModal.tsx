@@ -8,14 +8,14 @@ type ExperienceModalValues = {
 type ExperienceDataType = {
   title: string;
   company: string;
-  start: number;
-  end: number;
+  start: string;
+  end: string;
 }
 
 const ExperienceModal = ({onAddExperience}:ExperienceModalValues) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const [experience,setExperience] = 
-    useState({title: '', company: '', start: 0, end: 0})
+    useState({title: '', company: '', start: '', end: ''})
 
   const handleChange = (e: React.ChangeEvent<any>) => {
     setExperience({
@@ -70,14 +70,14 @@ const ExperienceModal = ({onAddExperience}:ExperienceModalValues) => {
                  />
                 <Input 
                    name="start"
-                   type="number" 
+                   type="text" 
                    label="Start"
                    value={experience.start}
                    onChange={handleChange}
                  />
                 <Input 
                    name="end"
-                   type="number"
+                   type="text"
                    label="End"
                    value={experience.end}
                    onChange={handleChange}
