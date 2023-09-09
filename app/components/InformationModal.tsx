@@ -51,7 +51,6 @@ const InformationModal = ({
                    placeholder="Enter your fullname" 
                    value={fullNameValue} 
                    onChange={onChange}
-                   isRequired='true'
                 />
                 <Input
                    name="address"
