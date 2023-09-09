@@ -14,7 +14,8 @@ type ExperienceDataType = {
 
 const ExperienceModal = ({onAddExperience}:ExperienceModalValues) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
-  const [experience,setExperience] = useState({})
+  const [experience,setExperience] = 
+    useState({title: '', company: '', start: 0, end: 0})
 
   const handleChange = (e: React.ChangeEvent<any>) => {
     setExperience({

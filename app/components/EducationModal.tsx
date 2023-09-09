@@ -13,7 +13,8 @@ type EducationDataType = {
 
 const EducationModal = ({onAddEducation}: EducationModalValues) => {
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
-  const [education,setEducation] = useState({})
+  const [education,setEducation] = 
+    useState({school: '',start: 0,end: 0})
 
   const handleChange = (e: React.ChangeEvent<any>) => {
     setEducation({
