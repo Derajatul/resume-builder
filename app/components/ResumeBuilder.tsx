@@ -34,14 +34,14 @@ const ResumeBuilder = () => {
   }
   const handleExperienceChange = ({title,company,start,end}: {title: string, company: string, start: string, end:string}) => {
     setExperiences([
-      ...experiences,
+      ...(experiences as { title: string; company: string; start: string; end: string }[]),
       {title: title, company: company, start: start, end: end}
     ])
   }
 
   const handleEducationChange = ({school,start,end}: {school: string,start:string,end:string}) => {
     setEducations([
-      ...educations,
+      ...(educations as { school: string; start: string; end: string }[]),
       {school: school, start: start, end:end}
     ])
   }
