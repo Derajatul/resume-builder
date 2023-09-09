@@ -32,14 +32,14 @@ const ResumeBuilder = () => {
   const handleSummaryChange = (e: React.ChangeEvent<any>) => {
     setSummary(e.target.value)
   }
-  const handleExperienceChange = ({title,company,start,end}) => {
+  const handleExperienceChange = ({title,company,start,end}: {title: string, company: string, start: string, end:string}) => {
     setExperiences([
       ...experiences,
       {title: title, company: company, start: start, end: end}
     ])
   }
 
-  const handleEducationChange = ({school,start,end}) => {
+  const handleEducationChange = ({school,start,end}: {school: string,start:string,end:string}) => {
     setEducations([
       ...educations,
       {school: school, start: start, end:end}
