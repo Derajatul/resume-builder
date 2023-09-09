@@ -2,7 +2,14 @@ import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDis
 import {useState} from 'react'
 
 type ExperienceModalValues = {
-  onAddExperince: () => void;
+  onAddExperience: ({title,company,start,end}: ExperienceDataType) => void;
+}
+
+type ExperienceDataType = {
+  title: string;
+  company: string;
+  start: number;
+  end: number;
 }
 
 const ExperienceModal = ({onAddExperience}:ExperienceModalValues) => {

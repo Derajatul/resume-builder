@@ -2,7 +2,13 @@ import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDis
 import {useState} from 'react'
 
 type EducationModalValues = {
-  onAddEducation: () => void;
+  onAddEducation: ({school,start,end}: EducationDataType) => void;
+}
+
+type EducationDataType = {
+  school: string;
+  start: number;
+  end:number;
 }
 
 const EducationModal = ({onAddEducation}: EducationModalValues) => {
